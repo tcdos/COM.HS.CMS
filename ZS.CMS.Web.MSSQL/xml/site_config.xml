@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<site_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <siteName>ZSCMS网站管理系统</siteName>
+  <siteUrl>www.tcdos.com</siteUrl>
+  <comName>ZSCMS网站管理系统</comName>
+  <comAddress>长沙市天心区高云路怡海星城</comAddress>
+  <comTel>0731-88885614</comTel>
+  <comFax>0731-88885614</comFax>
+  <comMail>www@tcdos.com</comMail>
+  <icp>湘ICP备10001807号</icp>
+  <isClose>false</isClose>
+  <closeInfor>网站正在维护中，请稍候访问……</closeInfor>
+  <allowExt>gif,jpg,png,bmp,rar,zip,doc,xls,pdf,txt</allowExt>
+  <maxUploadSize>104857600</maxUploadSize>
+  <isThumbnail>true</isThumbnail>
+  <thumbnailW>600</thumbnailW>
+  <thumbnailH>400</thumbnailH>
+  <thumbnailMode>w</thumbnailMode>
+  <editorAuto>true</editorAuto>
+  <editorMaxW>850</editorMaxW>
+  <feedbackType>业务咨询|投诉建议|其他</feedbackType>
+  <receiveMail>hello@tcdos.com</receiveMail>
+  <postMail>hello@tcdos.com</postMail>
+  <mailUserName>hello@tcdos.com</mailUserName>
+  <mailUserPwd>kntmKBWSsgv+84CW9gN49g==</mailUserPwd>
+  <smtpHost>smtp.163.com</smtpHost>
+  <smtpPort>25</smtpPort>
+  <isDown>true</isDown>
+  <allowDownUrl>localhost</allowDownUrl>
+</site_config>

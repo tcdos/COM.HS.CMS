@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+警告: 请勿修改此文件，它将用于 Web 发布过程。
+
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a3226e98-1525-4031-8621-faf5afc15645}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/ZS.CMS.Web.MSSQL</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebMetabasePath>
+    </SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZS.BLL\ZS.BLL.csproj">
+      <Project>{2F90EBE2-1ED5-43A0-B610-C3131CD5F3F8}</Project>
+      <Name>ZS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZS.DAL\ZS.DAL.csproj">
+      <Project>{75E8E32B-9D40-44DC-A4BA-D49D4D594366}</Project>
+      <Name>ZS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZS.DB\ZS.DB.csproj">
+      <Project>{C8297A18-C0AE-4F32-9951-8FCF310DD148}</Project>
+      <Name>ZS.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZS.KIT\ZS.KIT.csproj">
+      <Project>{80B851A5-0EBF-48DB-813A-09F6B046FC22}</Project>
+      <Name>ZS.KIT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZS.Model\ZS.Model.csproj">
+      <Project>{8561DA41-5BC7-4DC2-9649-2D934EA3E04F}</Project>
+      <Name>ZS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZS.TCDOS\ZS.TCDOS.csproj">
+      <Project>{09E82A93-D40F-4F6E-B9AD-40697C2F6C45}</Project>
+      <Name>ZS.TCDOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

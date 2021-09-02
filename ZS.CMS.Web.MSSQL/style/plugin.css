@@ -1,0 +1,1098 @@
+﻿@charset "utf-8";
+
+/*上传模块*/
+.zs-uploadFrame {
+	display: inline-block;
+	width: 100px;
+	height: 32px;
+	line-height: 32px;
+	overflow: hidden;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-uploadFrame iframe {
+	width: 100px;
+	height: 32px;
+	overflow: hidden;
+}
+
+.zs-upload-msg {
+	display: inline-block;
+	/*width: 300px;*/
+	height: 32px;
+	line-height: 32px;
+	vertical-align: middle;
+	color: #666;
+	*display: inline;
+	*zoom: 1;
+	overflow: hidden;
+}
+
+.zs-upload-msg-err {
+	padding: 0px 0px 0px 20px;
+	color: #ff0000;
+	font-weight: normal;
+	background: url(../images/zs-plugin-upload-err.png) no-repeat left center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload-msg-err {
+		background-image: url(../images/zs-plugin-upload-err-2x.png);
+		background-size: 16px 16px;
+	}
+}
+
+.zs-upload-msg-suc {
+	padding: 0px 0px 0px 20px;
+	color: #43cb1e;
+	font-weight: normal;
+	background: url(../images/zs-plugin-upload-suc.png) no-repeat left center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload-msg-suc {
+		background-image: url(../images/zs-plugin-upload-suc-2x.png);
+		background-size: 16px 16px;
+	}
+}
+
+.zs-upload {
+	display: inline;
+}
+
+.zs-upload i {
+	position: relative;
+	display: inline-block;
+	padding: 0px 10px;
+	width: 69px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-style: normal;
+	background: #0e78e7 url("../images/zs-plugin-upload.png") center no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload i {
+		background-image: url(../images/zs-plugin-upload-2x.png);
+		background-size: 69px 16px;
+	}
+}
+
+.zs-upload i .fileUpload {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	width: 90px;
+	height: 30px;
+	font-size: 150px;
+	cursor: pointer;
+}
+
+/*多文件上传*/
+.zs-upload-list {
+	display: inline-block;
+	padding: 5px 10px;
+	color: #999;
+	border: 1px dashed #e1e1e1;
+	background: #f9f9f9;
+}
+
+.zs-upload-list i {
+	padding: 0px 10px 0px 0px;
+}
+
+.zs-upload-list i a {
+	display: inline-block;
+	padding: 3px 5px 3px 25px;
+	background: url(../images/zs-plugin-u-attach.png) 5px center no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload-list i a {
+		background-image: url(../images/zs-plugin-u-attach-2x.png);
+		background-size: 14px 10px;
+	}
+}
+
+.zs-upload-list i b {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url(../images/zs-plugin-u-attach-del.png);
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload-list i b {
+		background-image: url(../images/zs-plugin-u-attach-del-2x.png);
+		background-size: 11px 11px;
+	}
+}
+
+.zs-upload-list i b:hover {
+	background: url(../images/zs-plugin-u-attach-del-hover.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-upload-list i b:hover {
+		background-image: url(../images/zs-plugin-u-attach-del-hover-2x.png);
+		background-size: 11px 11px;
+	}
+}
+
+/*表单控件：多项单选*/
+.zs-radiobutton-list {
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-radiobutton-list:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.zs-radiobutton-list .boxwrap {
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+}
+
+.zs-radiobutton-list a {
+	display: inline-block;
+	margin-right: -1px;
+	float: left;
+	padding: 5px 15px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+	vertical-align: middle;
+	color: #555;
+	font-size: 100%;
+	cursor: pointer;
+}
+
+.zs-radiobutton-list a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+.zs-radiobutton-list a:active {
+	text-decoration: none;
+}
+
+.zs-radiobutton-list a.selected {
+	background: #0e78e7;
+	border-color: #0e78e7;
+	color: #fff;
+}
+
+/*表单控件：单项选择*/
+.zs-single-checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-single-checkbox a, .zs-single-checkbox a:visited {
+	display: inline-block;
+	border: 1px solid #ddd;
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+	background: #ddd;
+	width: 80px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.zs-single-checkbox a i {
+	display: block;
+	width: 50%;
+	height: 28px;
+	line-height: 28px;
+	font-style: normal;
+	background: #fff;
+	color: #555;
+	text-align: center;
+}
+
+.zs-single-checkbox a i.on {
+	float: right;
+	display: none;
+}
+
+.zs-single-checkbox a i.off {
+	float: left;
+	display: block;
+}
+
+.zs-single-checkbox a.selected {
+	border: 1px solid #0e78e7;
+	background: #0e78e7;
+}
+
+.zs-single-checkbox a.selected i.on {
+	display: block;
+}
+
+.zs-single-checkbox a.selected i.off {
+	display: none;
+}
+
+/*表单控件：多项选择*/
+.zs-checkbox-list {
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-checkbox-list:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.zs-checkbox-list .boxwrap {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.zs-checkbox-list a {
+	display: inline-block;
+	float: left;
+	margin-right: -1px;
+	padding: 5px 15px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #ddd;
+	/*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+	vertical-align: middle;
+	color: #555;
+	font-size: 100%;
+	cursor: pointer;
+}
+
+.zs-checkbox-list a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+.zs-checkbox-list a:active {
+	text-decoration: none;
+}
+
+.zs-checkbox-list a.selected {
+	background: #0e78e7;
+	border-color: #0e78e7;
+	color: #fff;
+}
+
+.zs-checkbox-list a:last-child {
+}
+/*表单控件：多项选择PORP*/
+.zs-checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-checkbox ul li {
+	float: left;
+	position: relative;
+	margin: 0 8px 8px 0;
+	padding: 1px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.zs-checkbox ul li a {
+	display: block;
+	padding: 4px 10px;
+	color: #666;
+	min-width: 10px;
+	width: auto !important;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	border: 1px solid #ddd;
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+	cursor: pointer;
+}
+
+.zs-checkbox ul li i {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: 1px;
+	width: 12px;
+	height: 12px;
+	text-indent: -99em;
+	overflow: hidden;
+}
+
+.zs-checkbox ul li.sys {
+	background: #FFFFD0;
+}
+
+.zs-checkbox ul li.selected a {
+	margin: -1px;
+	color: #555;
+	border: 2px solid #0e78e7;
+}
+
+.zs-checkbox ul li.selected i {
+	display: block;
+	/*background: url(../images/zs-plugin-drop-check.png);*/
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-checkbox ul li.selected i {
+		/*background-image: url(../images/zs-plugin-drop-check-2x.png);
+		background-size: 12px 12px;*/
+	}
+}
+
+/*表单控件：下拉菜单*/
+.zs-dropdown-list {
+	position: relative;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	*float: left;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-dropdown-list .boxwrap {
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+	*zoom: 1;
+}
+
+.zs-dropdown-list .select-tit {
+	position: relative;
+	display: block;
+	padding: 5px 38px 5px 10px;
+	min-width: 40px;
+	line-height: 20px;
+	height: 20px;
+	border: solid 1px #ddd;
+	/*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+	text-decoration: none;
+	background: #fff;
+	white-space: nowrap;
+	word-break: break-all;
+}
+
+.zs-dropdown-list .select-tit span {
+	display: inline-block;
+	color: #333;
+	font-size: 12px;
+	/*vertical-align: middle;*/
+}
+
+.zs-dropdown-list .select-tit i {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 28px;
+	height: 100%;
+	border-left: 1px solid #ddd;
+	background: #fff url(../images/zs-plugin-ddl-arr.png) center no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-dropdown-list .select-tit i {
+		background-image: url(../images/zs-plugin-ddl-arr-2x.png);
+		background-size: 12px 6px;
+	}
+}
+
+.zs-dropdown-list .select-items {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 43px;
+	box-shadow: 1px 2px 5px #ccc;
+}
+
+.zs-dropdown-list .select-items ul {
+	position: relative;
+	padding: 5px;
+	min-width: 120px;
+	max-height: 280px;
+	border: 1px solid #ddd;
+	background: #fff;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.zs-dropdown-list .select-items ul li {
+	display: block;
+	padding: 4px 10px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #666;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.zs-dropdown-list .select-items ul li:hover {
+	text-decoration: none;
+	background: #eee;
+}
+
+.zs-dropdown-list .select-items ul li.selected {
+	color: #FFF;
+	background: #0e78e7;
+}
+
+.zs-dropdown-list .arrow {
+	display: none;
+	position: absolute;
+	left: 15px;
+	top: 35px;
+	width: 18px;
+	height: 9px;
+	text-indent: -9999px;
+	background: url(../images/zs-plugin-ddl-bg.png) no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.zs-dropdown-list .arrow {
+		background-image: url(../images/zs-plugin-ddl-bg-2x.png);
+		background-size: 18px 18px;
+	}
+}
+
+/*表单验证*/
+.Validform_checktip {
+	display: inline;
+	margin-left: 8px;
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	color: #999;
+	font-size: 12px;
+}
+
+.Validform_right {
+	color: #43cb1e;
+	padding-left: 20px;
+	background: url(../images/zs-plugin-vform-right.png) no-repeat left center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.Validform_right {
+		background-image: url(../images/zs-plugin-vform-right-2x.png);
+		background-size: 16px 16px;
+	}
+}
+
+.Validform_wrong {
+	color: red;
+	padding-left: 20px;
+	white-space: nowrap;
+	background: url(../images/zs-plugin-vform-error.png) no-repeat left center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	.Validform_wrong {
+		background-image: url(../images/zs-plugin-vform-error-2x.png);
+		background-size: 16px 16px;
+	}
+}
+
+.Validform_loading {
+	padding-left: 20px;
+	background: url(../images/zs-plugin-vform-onLoad.gif) no-repeat left center;
+}
+
+.Validform_error {
+	border-color: #F56A6A;
+	background-color: #FEFBD3;
+}
+
+#Validform_msg {
+	color: #7d8289;
+	font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+	width: 280px;
+	-webkit-box-shadow: 2px 2px 3px #aaa;
+	-moz-box-shadow: 2px 2px 3px #aaa;
+	background: #fff;
+	position: absolute;
+	top: 0px;
+	right: 50px;
+	z-index: 99999;
+	display: none;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#Validform_msg .iframe {
+	position: absolute;
+	left: 0px;
+	top: -1px;
+	z-index: -1;
+}
+
+#Validform_msg .Validform_title {
+	line-height: 25px;
+	height: 25px;
+	text-align: left;
+	font-weight: bold;
+	padding: 0 8px;
+	color: #fff;
+	position: relative;
+	background-color: #0e78e7;
+}
+
+#Validform_msg a.Validform_close:link, #Validform_msg a.Validform_close:visited {
+	line-height: 22px;
+	position: absolute;
+	right: 8px;
+	top: 0px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#Validform_msg a.Validform_close:hover {
+	color: #ccc;
+}
+
+#Validform_msg .Validform_info {
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-top: none;
+	text-align: left;
+}
+
+/*TIP气泡*/
+#tiptip_holder {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+#tiptip_holder.tip_top {
+	padding-bottom: 5px;
+}
+
+#tiptip_holder.tip_bottom {
+	padding-top: 5px;
+}
+
+#tiptip_holder.tip_right {
+	padding-left: 5px;
+}
+
+#tiptip_holder.tip_left {
+	padding-right: 5px;
+}
+
+#tiptip_content {
+	font-size: 12px;
+	color: #fff;
+	line-height: 20px;
+	text-shadow: 0 0 2px #000;
+	padding: 4px 8px;
+	border: 1px solid rgb(25,25,25);
+	background-color: rgb(25,25,25);
+}
+
+#tiptip_arrow, #tiptip_arrow_inner {
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
+
+#tiptip_holder.tip_top #tiptip_arrow {
+	border-top-color: #191919;
+	border-top-color: rgb(25,25,25);
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow {
+	border-bottom-color: #191919;
+	border-bottom-color: rgb(25,25,25);
+}
+
+#tiptip_holder.tip_right #tiptip_arrow {
+	border-right-color: #191919;
+	border-right-color: rgb(25,25,25);
+}
+
+#tiptip_holder.tip_left #tiptip_arrow {
+	border-left-color: #191919;
+	border-left-color: rgb(25,25,25);
+}
+
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	margin-top: -7px;
+	margin-left: -6px;
+	border-top-color: rgb(25,25,25);
+	border-top-color: rgba(25,25,25,1);
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	margin-top: -5px;
+	margin-left: -6px;
+	border-bottom-color: rgb(25,25,25);
+	border-bottom-color: rgba(25,25,25,1);
+}
+
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -5px;
+	border-right-color: rgb(25,25,25);
+	border-right-color: rgba(25,25,25,1);
+}
+
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -7px;
+	border-left-color: rgb(25,25,25);
+	border-left-color: rgba(25,25,25,1);
+}
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#tiptip_content {
+		padding: 4px 8px 5px 8px;
+		background-color: rgba(25,25,25,1);
+	}
+
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+		border-bottom-color: rgba(25,25,25,1);
+	}
+
+	#tiptip_holder.tip_top #tiptip_arrow_inner {
+		border-top-color: rgba(25,25,25,1);
+	}
+}
+
+/* 日历控件calendar */
+.xdsoft_datetimepicker {
+	box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.506);
+	background: #FFFFFF;
+	border: 1px solid #ddd;
+	color: #333333;
+	display: block;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding: 8px;
+	padding-left: 0px;
+	padding-top: 2px;
+	position: absolute;
+	z-index: 9999;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: none;
+}
+
+.xdsoft_datetimepicker iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 75px;
+	height: 210px;
+	background: transparent;
+	border: none;
+}
+/*For IE8 or lower*/
+.xdsoft_datetimepicker button {
+	border: none !important;
+}
+
+.xdsoft_noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.xdsoft_noselect::selection {
+	background: transparent;
+}
+
+.xdsoft_noselect::-moz-selection {
+	background: transparent;
+}
+
+.xdsoft_datetimepicker.xdsoft_inline {
+	display: inline-block;
+	position: static;
+	box-shadow: none;
+}
+
+.xdsoft_datetimepicker * {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker, .xdsoft_datetimepicker  .xdsoft_timepicker {
+	display: none;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker.active, .xdsoft_datetimepicker  .xdsoft_timepicker.active {
+	display: block;
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker {
+	width: 224px;
+	float: left;
+	margin-left: 8px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker {
+	width: 58px;
+	float: left;
+	text-align: center;
+	margin-left: 8px;
+	margin-top: 0px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_datepicker.active+.xdsoft_timepicker {
+	margin-top: 8px;
+	margin-bottom: 3px
+}
+
+.xdsoft_datetimepicker  .xdsoft_mounthpicker {
+	position: relative;
+	text-align: center;
+}
+
+.xdsoft_datetimepicker  .xdsoft_prev, .xdsoft_datetimepicker  .xdsoft_next,.xdsoft_datetimepicker  .xdsoft_today_button {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAeCAYAAACsYQl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozQjRCQjRGREU4MkNFMzExQjRDQkIyRDJDOTdBRUI1MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQjg0OUYyNTZDODAxMUUzQjMwM0IwMERBNUU0ODQ5NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQjg0OUYyNDZDODAxMUUzQjMwM0IwMERBNUU0ODQ5NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI5NzE3MjFBN0E2Q0UzMTFBQjJEQjgzMDk5RTNBNTdBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCNEJCNEZERTgyQ0UzMTFCNENCQjJEMkM5N0FFQjUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+aQvATgAAAfVJREFUeNrsmr1OwzAQxzGtkPjYEAuvVGAvfQIGRKADE49gdLwDDwBiZ2RhQUKwICQkWLsgFiRQuIBTucFJ/XFp4+hO+quqnZ4uvzj2nV2RpukCW/22yAgYNINmc7du7DcghCjrkqgOKjF1znpt6rZ0AGWQj7TvCU8d9UM+QAGDrhdyc2Bnc1WVVPBev9V8lBnY+rDwncWZThG4xk4lmxtJy2AHgoY/FySgbSBPwPZ8mEXbQx3aDERb0EbYAYFC7pcAtAvkMWwC0D3NX58S9D/YnoGC7nPWr3Dg9JTbtuHhDShBT8D2CBSK/iIEvVXxpuxSgh7DdgwUTL4iA92zmJb6lKB/YTsECmV+IgK947AGDIqgQ/LojsO135Hn51l2cWlov0JdGNrPUceueXRwilSVgkUyom9Rd6gbLfYTDeO+1v6orn0InTogYDGUkYLO3/wc9BdqqTCKP1Tfi+oTIaCBIL2TES+GTyruT9S61p6BHam+99DFEAgLFklYsIBHwSI9QY80H5ta+1rB/6ovaKihBJeEJbgLbBlQgl+j3lDPqA2tfQV1j3pVn8s+oKHGTSVJ+FqDLeR5bCqJ2E/BCycsoLZETXaKGs7rhKVt+9HZScrZNMi88V8P7LlDbvOZYaJVpMMmBCT4n0o8dTBoNgbdWPsRYACs3r7XyNfbnAAAAABJRU5ErkJggg==');
+}
+
+.xdsoft_datetimepicker  .xdsoft_prev {
+	float: left;
+	background-position: -20px 0px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_today_button {
+	float: left;
+	background-position: -70px 0px;
+	margin-left: 5px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_next {
+	float: right;
+	background-position: 0px 0px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_next:active,.xdsoft_datetimepicker  .xdsoft_prev:active {
+}
+
+.xdsoft_datetimepicker  .xdsoft_next,.xdsoft_datetimepicker  .xdsoft_prev ,.xdsoft_datetimepicker  .xdsoft_today_button {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0px none currentColor;
+	cursor: pointer;
+	display: block;
+	height: 30px;
+	opacity: 0.5;
+	outline: medium none currentColor;
+	overflow: hidden;
+	padding: 0px;
+	position: relative;
+	text-indent: 100%;
+	white-space: nowrap;
+	width: 20px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_prev,
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_next {
+	float: none;
+	background-position: -40px -15px;
+	height: 15px;
+	width: 30px;
+	display: block;
+	margin-left: 14px;
+	margin-top: 7px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_prev {
+	background-position: -40px 0px;
+	margin-bottom: 7px;
+	margin-top: 0px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box {
+	height: 151px;
+	overflow: hidden;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div {
+	background: #F5F5F5;
+	border-top: 1px solid #DDDDDD;
+	color: #666666;
+	font-size: 12px;
+	text-align: center;
+	border-collapse: collapse;
+	cursor: pointer;
+	border-bottom-width: 0px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div > div:first-child {
+	border-top-width: 0px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_today_button:hover,
+.xdsoft_datetimepicker  .xdsoft_next:hover,
+.xdsoft_datetimepicker  .xdsoft_prev:hover {
+	opacity: 1;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label {
+	display: inline;
+	position: relative;
+	z-index: 9999;
+	margin: 0;
+	padding: 5px 3px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	background-color: #fff;
+	float: left;
+	width: 182px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label:hover {
+	text-decoration: underline;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select {
+	border: 1px solid #ccc;
+	position: absolute;
+	display: block;
+	right: 0px;
+	top: 30px;
+	z-index: 101;
+	display: none;
+	background: #fff;
+	max-height: 160px;
+	overflow-y: hidden;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select.xdsoft_monthselect {
+	right: -7px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select.xdsoft_yearselect {
+	right: 2px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+	color: #fff;
+	background: #ff8000;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+	padding: 2px 10px 2px 5px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+	background: #0e78e7;
+	box-shadow: #0e78e7 0px 1px 3px 0px inset;
+	color: #fff;
+	font-weight: 700;
+}
+
+.xdsoft_datetimepicker  .xdsoft_month {
+	width: 90px;
+	text-align: right;
+    font-size: 11px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar {
+	clear: both;
+}
+
+.xdsoft_datetimepicker  .xdsoft_year {
+	width: 56px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td > div {
+	padding-right: 5px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar th {
+	height: 25px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td,.xdsoft_datetimepicker  .xdsoft_calendar th {
+	width: 14.2857142%;
+	text-align: center;
+	background: #F5F5F5;
+	border: 1px solid #DDDDDD;
+	color: #666666;
+	font-size: 12px;
+	text-align: right;
+	padding: 0px;
+	border-collapse: collapse;
+	cursor: pointer;
+	height: 25px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar th {
+	background: #F1F1F1;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_today {
+	color: #0e78e7;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+	background: #0e78e7;
+	box-shadow: #0e78e7 0px 1px 3px 0px inset;
+	color: #fff;
+	font-weight: 700;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_other_month,
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_disabled,
+.xdsoft_datetimepicker  .xdsoft_time_box >div >div.xdsoft_disabled {
+	opacity: 0.5;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_other_month.xdsoft_disabled {
+	opacity: 0.2;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div:hover {
+	color: #fff !important;
+	background: #ff8000 !important;
+	box-shadow: none !important;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar td.xdsoft_disabled:hover,
+.xdsoft_datetimepicker  .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_disabled:hover {
+	color: inherit	!important;
+	background: inherit !important;
+	box-shadow: inherit !important;
+}
+
+.xdsoft_datetimepicker  .xdsoft_calendar th {
+	font-weight: 700;
+	text-align: center;
+	color: #999;
+	cursor: default;
+}
+
+.xdsoft_datetimepicker  .xdsoft_copyright {
+	color: #ccc !important;
+	font-size: 10px;
+	clear: both;
+	float: none;
+	margin-left: 8px;
+}
+
+.xdsoft_datetimepicker  .xdsoft_copyright a {
+	color: #eee !important;
+}
+
+.xdsoft_datetimepicker  .xdsoft_copyright a:hover {
+	color: #aaa !important;
+}
+
+.xdsoft_time_box {
+	position: relative;
+	border: 1px solid #ccc;
+}
+
+.xdsoft_scrollbar >.xdsoft_scroller {
+	background: #ccc !important;
+	height: 20px;
+	border-radius: 3px;
+}
+
+.xdsoft_scrollbar {
+	position: absolute;
+	width: 7px;
+	width: 7px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	cursor: pointer;
+}
+
+.xdsoft_scroller_box {
+	position: relative;
+}

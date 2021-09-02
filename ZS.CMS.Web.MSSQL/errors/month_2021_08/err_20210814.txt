@@ -1,0 +1,38 @@
+
+========== 10:52:44 ==========
+URL: http://localhost:52209/cms/login.aspx
+UIP: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36
+AGE: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+MSG: ::1
+STC:
+   在 ZS.DB.znSqlDb.ExeScalar(String strSql, SqlParameter[] cmdParms) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.DB\znSqlDb.cs:行号 266
+   在 ZS.DAL.znUser.GetModel(String UserName, String UserPwd) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.DAL\znUser.cs:行号 239
+   在 ZS.BLL.znUser.GetModel(String UserName, String UserPwd) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.BLL\znUser.cs:行号 85
+   在 cms_login.CheckLogin() 位置 c:\Users\www\Desktop\zs.cms-master\ZS.CMS.Web.MSSQL\cms\login.aspx.cs:行号 73
+   在 cms_login.btnLogin_Click(Object sender, EventArgs e) 位置 c:\Users\www\Desktop\zs.cms-master\ZS.CMS.Web.MSSQL\cms\login.aspx.cs:行号 34
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+=====================
+
+========== 10:55:54 ==========
+URL: http://localhost:52209/cms/login.aspx
+UIP: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36
+AGE: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+MSG: ::1
+STC:
+   在 ZS.DB.znSqlDb.ExeScalar(String strSql, SqlParameter[] cmdParms) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.DB\znSqlDb.cs:行号 266
+   在 ZS.DAL.znUser.GetModel(String UserName, String UserPwd) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.DAL\znUser.cs:行号 239
+   在 ZS.BLL.znUser.GetModel(String UserName, String UserPwd) 位置 C:\Users\www\Desktop\zs.cms-master\ZS.BLL\znUser.cs:行号 85
+   在 cms_login.CheckLogin() 位置 c:\Users\www\Desktop\zs.cms-master\ZS.CMS.Web.MSSQL\cms\login.aspx.cs:行号 73
+   在 cms_login.btnLogin_Click(Object sender, EventArgs e) 位置 c:\Users\www\Desktop\zs.cms-master\ZS.CMS.Web.MSSQL\cms\login.aspx.cs:行号 34
+   在 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   在 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+=====================
